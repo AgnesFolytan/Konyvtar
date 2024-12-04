@@ -64,6 +64,7 @@ public class KonyvtarAdapter extends BaseAdapter {
 
                 builder.setPositiveButton("Igen", (DialogInterface.OnClickListener) (dialog, which) -> {
                     konyvtarList.remove(v);
+                    notifyDataSetChanged();
                 });
 
                 builder.setNegativeButton("Nem", (DialogInterface.OnClickListener) (dialog, which) -> {
